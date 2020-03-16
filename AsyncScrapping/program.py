@@ -47,7 +47,7 @@ async def get_title_range():
         tasks.append((n, asyncio.create_task(get_html(n))))
 
     for n,t in tasks:
-        html = await t g
+        html = await t
         title =  get_title(html, n)
         print(Fore.GREEN + f"Title :  {title}", flush = True)
 
